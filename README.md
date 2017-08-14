@@ -1,5 +1,5 @@
 # react-redux-saga-graphcool-auth0
-This is a scaled back implementation of my base app. My base app includes things like Ethereum web3 integration & aws delegate tokens through Auth0.
+This is a scaled back implementation of my base app which includes things like Ethereum web3 integration & aws delegate tokens through Auth0.
 
 The removed ethereum portions are based on:
 https://github.com/lutangar/ethereact
@@ -9,7 +9,9 @@ https://github.com/tkntobfrk/ethereum-starter
 
 The auth0 AWS delegate token can allow users a personal slice of AWS S3 storage to upload files.  For the simplest use case of something like S3 storage graph.cool has a file API that could be used instead. So I took this concept out to avoid making the example overly complex. AWS creds and passing them out to various social identities should be handled with care so this was removed.
 
-Original has some other features, mostly expressing permissions, subscriptions, & relationships "friends/likes/etc".
+Original has some other features, mostly on graphcool permissions, subscriptions, & relationships "friends/likes/etc".
+
+Redux tools work.
 
 # clone the repo
 * git clone https://github.com/tkntobfrk/react-redux-saga-graphcool-auth0.git
@@ -25,12 +27,13 @@ Original has some other features, mostly expressing permissions, subscriptions, 
 
 # create graphcool account - https://www.graph.cool/
 * graphcool
-* auth0 setup as authentication provider to graphcool
+
 
 # install graphcool cli & schema
 * npm install -g graphcool
 * graphcool init --schema ./infrastructure/init-post-schema.graphql
 * add the simple api url to ./app/utils/config.js
+* return to graph.cool console to add auth0 as authentication provider on the integrations tab for the new project
 
 #run it
 * npm i
