@@ -16,7 +16,9 @@ Redux tools work.
 # clone the repo
 * git clone https://github.com/tkntobfrk/react-redux-saga-graphcool-auth0.git
 * cd react-redux-saga-graphcool-auth0
-* copy ../utils/config-example.js ../utils/config.js
+* cd app/utils
+* copy config-example.js config.js
+* cd ../..
 
 # create Auth0 account - https://manage.auth0.com/#/
 * create new auth0 client
