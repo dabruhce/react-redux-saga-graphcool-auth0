@@ -1,0 +1,17 @@
+
+type Post implements Node {
+  createdAt: DateTime!
+  description: String!
+  id: ID! @isUnique
+  imageUrl: String!
+  updatedAt: DateTime!
+  owner: [User!]! @relation(name: "PostOwner")
+}
+
+type User implements Node {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  updatedAt: DateTime!
+  posts: [Post!]! @relation(name: "PostOwner")
+}
